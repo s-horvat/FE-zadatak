@@ -15,13 +15,13 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-neutral-700">
+  <body class="">
     <div class="m-auto w-full">
       <wrapper>
-        <div class="bg-neutral-600">
+        <div class="0">
           <!-- top bar -->
-          <div
-            class="flex justify-between text-center items-center bg-neutral-[#2f2f2f] text-[#F5F5F5] m-0 px-[2.5%] sm:justify-around sm:px-0 xl:m-auto xl:px-0 h-8 sm:h-12 xl:justify-between overflow-hidden xl:mx-[8%] min-[1800px]:mx-[15.625%] lg:gap-10"
+          <top-bar
+            class="flex justify-between text-center items-center bg-[#2F2F2F] text-[#F5F5F5] m-0 px-[2.5%] sm:justify-around sm:px-0 xl:m-auto xl:px-0 h-8 sm:h-12 xl:justify-between overflow-hidden xl:mx-[8%] min-[1800px]:mx-[15.625%] lg:gap-10"
           >
             <div
               class="font-titilliumWeb flex justify-stretch gap-0.5 leading-3 sm:gap-1 xl:gap-2 text-[10px] sm:text-[12px] xl:text-[14px] xl:leading-4"
@@ -49,7 +49,7 @@
               >Promo message area - shipping advantages, special offers…</span
             >
 
-            <div class="flex justify-end font-light">
+            <sign-in class="flex justify-end font-light">
               <button class="text-[16px] leading-4 flex">
                 <img
                   src="../src/img/user.png"
@@ -62,18 +62,19 @@
                   SIGN IN
                 </span>
               </button>
-            </div>
-          </div>
+            </sign-in>
+          </top-bar>
 
           <!-- top bar end -->
           <!-- start header  -->
-          <div class="bg-white w-full">
+          <header class="bg-white w-full">
             <div
-              class="h-[72px] bg-white flex align-middle items-center justify-between lg:h-24 min-[1800px]:mx-[13.18%] sm:px-[2.4%] xl:mx-[5.2%]"
+              class="h-[72px] bg-white flex align-middle items-center justify-between lg:h-24 sm:px-[2.4%] xl:mx-[5.2%] min-[1800px]:mx-[13.18%]"
             >
+              <!-- hamburger menu -->
               <button class="w-10 h-10 my-4 mr-4 pl-1 lg:hidden">
                 <div
-                  class="w-10 h-10 border rounded-full border-solid border-black flex justify-center items-center"
+                  class="w-10 h-10 border rounded-full border-none flex justify-center items-center bg-[#F5F5F5]"
                 >
                   <img
                     src="../src/img/menu-bar.png"
@@ -83,6 +84,7 @@
                   />
                 </div>
               </button>
+              <!-- inchoo logo -->
               <div class="flex items-center mr-[53px]">
                 <img
                   src="../src/img/inchoo-logo 1.png"
@@ -90,6 +92,7 @@
                   class="h-6 w-[99px] xl:w-[154px] xl:h-[36px] sm:h-6"
                 />
               </div>
+              <!-- menu and submenu, hidden unless >768px -->
               <div class="hidden lg:flex">
                 <div class="hidden w-5 h-12 sm:flex">
                   <img
@@ -118,14 +121,16 @@
                   >JEEP ACCESSORIES</span
                 >
               </div>
+
+              <!-- search product -->
               <div
-                class="hidden md:flex md:justify-between border h-12 border-solid border-black w-[358px]"
+                class="hidden md:flex md:justify-between border items-center h-8 lg:h-12 border-solid border-black w-64 lg:w-[358px]"
               >
                 <input
                   type="search"
                   placeholder="Search entire store here…"
                   id=""
-                  class="hidden md:block lg:text-[14px] lg:leading-4 pl-4 w-full"
+                  class="hidden md:block lg:text-[14px] lg:leading-4 pl-4 w-full h-full font-titilliumWeb text-[14px] leading-6"
                 />
 
                 <button type="submit">
@@ -147,7 +152,7 @@
                   class="w-4 h-4"
                 />
               </button>
-
+              <!-- cart  -->
               <button
                 class="bg-[#008421] w-10 h-10 flex justify-center lg:justify-evenly items-center my-4 mr-[4.5%] md:mr-0 lg:h-12 lg:w-[143px]"
               >
@@ -166,7 +171,7 @@
                     class="bg-[#F5F5F5] border rounded-full border-none w-4 h-4 absolute mx-1 -my-7 lg:mx-[12px] lg:-my-9 lg:min-w-[24px] lg:min-h-[24px]"
                   >
                     <span
-                      class="text-[10px] absolute w-full h-full table text-[#008421] lg:text-[16px] lg:leading-4 lg:mt-[2px]"
+                      class="text-[10px] absolute w-full h-full table font-bold text-[#008421] lg:text-[16px] lg:leading-4 lg:mt-[2px]"
                       >2</span
                     >
                   </span>
@@ -178,9 +183,278 @@
                 />
               </button>
             </div>
-          </div>
-
+          </header>
           <!-- header end -->
+
+          <!-- start main  -->
+          <main
+            class="w-full h-full xl:pr-[7.5%] xl:flex xl:flex-row-reverse r-8"
+          >
+            <div class="h-full xl:w-[320px] min-[1800px]:mr-[8.75%]">
+              <span
+                class="uppercase flex font-bebasNeue font-normal text-[22px] align-middle leading-6 px-6 my-6 bg-white"
+              >
+                SHOPPING cart
+              </span>
+
+              <article class="w-full h-full font-bebasNeue bg-[#F5F5F5]">
+                <div class="px-6 h-14 flex items-center text-[18px] leading-6">
+                  ESTIMATE SHIPPING AND TAX
+                </div>
+
+                <div class="toogle-hidden">
+                  <hr class="2px mx-2 border-white" />
+                  <div class="flex flex-col mx-6 my-4">
+                    <!-- subtotal -->
+                    <div class="flex justify-between items-center">
+                      <span class="text-[16px] leading-4 pb-2">SUBTOTAL</span>
+                      <span class="font-titilliumWeb text-[12px] leading-4"
+                        >$150.00</span
+                      >
+                    </div>
+
+                    <!-- shipping -->
+                    <div class="flex justify-between">
+                      <span class="text-[16px] leading-4">
+                        shipping
+                        <span class="font-titilliumWeb text-[12px] leading-4"
+                          >(Flat Rate - Fixed)</span
+                        >
+                      </span>
+                      <span class="font-titilliumWeb text-[12px] leading-4"
+                        >$5.00</span
+                      >
+                    </div>
+                  </div>
+                  <hr class="2px mx-2 border-white" />
+
+                  <!-- order total -->
+                  <div class="flex justify-between mx-6 my-4">
+                    <span class="text-[18px] leading-6"> ORDER TOTAL </span>
+                    <span
+                      class="font-titilliumWeb text-[14px] leading-4 font-bold"
+                      >$155.00</span
+                    >
+                  </div>
+                  <!-- checkout -->
+                  <div class="w-full h-full inline-flex justify-center">
+                    <button class="min-w-[304px] h-12 bg-[#008421]">
+                      <span
+                        class="font-bebasNeue text-[18px] leading-6 text-[#F5F5F5] flex justify-center items-center"
+                        >PROCEED TO CHECKOUT</span
+                      >
+                    </button>
+                  </div>
+
+                  <button
+                    class="underline font-titilliumWeb text-[11px] leading-4 font-bold w-full my-6"
+                  >
+                    CHECKOUT WITH MULTIPLE ADDRESSES
+                  </button>
+                </div>
+                <hr class="2px border-black py-6 mx-4 bg-white" />
+              </article>
+            </div>
+
+            <!-- jeep soft top cart item -->
+            <article class="px-2">
+              <!-- one item -->
+              <div>
+                <div>
+                  <div class="w-full h-full flex xl:justify-end">
+                    <img
+                      src="../src/img/jeep.png"
+                      alt="jeep_fleep_top_frameless"
+                      class="w-36 h-[72px] mr-2"
+                    />
+                    <div>
+                      <span class="font-bebasNeue leading-4"
+                        >Flip Top™ Complete Replacement Soft Top, Jeep 1976-1995
+                        CJ-7/Wrangler, No doors included, Clear side and rear
+                        windows
+                      </span>
+                      <span
+                        class="font-titilliumWeb font-bold h-full text-[12px] leading-4"
+                        >Color:
+                        <span class="font-normal"> Black Denim</span></span
+                      >
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between font-titilliumWeb text-[12px] leading-4 font-bold"
+                  >
+                    <div class="pl-4 text-center">
+                      Qty
+
+                      <span
+                        class="w-12 h-12 flex justify-center border-2 border-solid border-black mt-4 items-center"
+                      >
+                        1
+                      </span>
+                    </div>
+                    <div class="pr-4">
+                      SUBTOTAL
+
+                      <span
+                        class="w-full h-12 flex items-end justify-end text-right p-1"
+                        >$150.00</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end py-4 pr-4">
+                  <button>
+                    <img
+                      src="../src/img/edit.png"
+                      alt="edit"
+                      class="w-4 h-4 mr-6"
+                    />
+                  </button>
+                  <button>
+                    <img
+                      src="../src/img/remove.png"
+                      alt="edit"
+                      class="w-4 h-4"
+                    />
+                  </button>
+                </div>
+                <hr class="2px border-black pt-2" />
+              </div>
+              <!-- one item end -->
+              <!-- second item -->
+              <div>
+                <div>
+                  <div class="w-full h-full flex xl:justify-end">
+                    <img
+                      src="../src/img/jeep.png"
+                      alt="jeep_fleep_top_frameless"
+                      class="w-36 h-[72px] mr-2"
+                    />
+                    <div>
+                      <span class="font-bebasNeue leading-4"
+                        >Flip Top™ Complete Replacement Soft Top, Jeep 1976-1995
+                        CJ-7/Wrangler, No doors included, Clear side and rear
+                        windows
+                      </span>
+                      <span
+                        class="font-titilliumWeb font-bold h-full text-[12px] leading-4"
+                        >Color:
+                        <span class="font-normal"> Black Denim</span></span
+                      >
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between font-titilliumWeb text-[12px] leading-4 font-bold"
+                  >
+                    <div class="pl-4 text-center">
+                      Qty
+
+                      <span
+                        class="w-12 h-12 flex justify-center border-2 border-solid border-black mt-4 items-center"
+                      >
+                        1
+                      </span>
+                    </div>
+                    <div class="pr-4">
+                      SUBTOTAL
+
+                      <span
+                        class="w-full h-12 flex items-end justify-end text-right p-1"
+                        >$250.00</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end py-4 pr-4">
+                  <button>
+                    <img
+                      src="../src/img/edit.png"
+                      alt="edit"
+                      class="w-4 h-4 mr-6"
+                    />
+                  </button>
+                  <button>
+                    <img
+                      src="../src/img/remove.png"
+                      alt="edit"
+                      class="w-4 h-4"
+                    />
+                  </button>
+                </div>
+                <hr class="2px border-black pt-2" />
+              </div>
+              <!-- second item end -->
+              <div>
+                <button
+                  class="flex h-10 w-full mt-4 border border-black border-solid font-bebasNeue text-[16px] leading-5 bg-[#2F2F2F]"
+                >
+                  <span
+                    class="w-full h-full flex justify-center items-center text-[#f5f5f5]"
+                  >
+                    UPDATE SHOPPING CART</span
+                  >
+                </button>
+
+                <div
+                  class="flex min-w-[304px] h-10 justify-between mt-4 mb-7 border-black border-2 border-solid"
+                >
+                  <input
+                    type="text"
+                    name="Enter Discount code"
+                    placeholder="Enter Discount code"
+                    class="w-56 h-9 pl-4 border-none"
+                  />
+                  <button
+                    class="w-20 border-l-2 border-solid border-black text-center font-bebasNeue text-[16px] leading-4"
+                  >
+                    APPLY
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- cart end -->
+          </main>
+          <!-- main end -->
+          <!-- start footer -->
+          <footer class="bg-[#2F2F2F] text-[#F5F5F5] leading-4 font-bold py-6">
+            <div class="font-titilliumWeb text-[12px] pb-3">
+              <span class="flex justify-center font-normal"
+                ><span>&copy</span> Jeep is a registered trademark of FCA US
+                LLC.</span
+              >
+            </div>
+            <div class="flex justify-center text-center text-[11px]">
+              <ul class="h-full">
+                <ul class="underline uppercase">
+                  <li class="py-3"><a href="#">About Us</a></li>
+                  <li class="py-3"><a href="#">CONTACT Us</a></li>
+                  <li class="py-3"><a href="#">Search Terms</a></li>
+                  <li class="py-3">
+                    <a href="#">Privacy and Cookie Policy</a>
+                  </li>
+                  <li class="py-3"><a href="#">Installation Videos</a></li>
+                </ul>
+                <li class="pt-3">
+                  <div class="text-[12px] font-normal">
+                    Contact our Customer Service
+                    <div class="pt-2 flex items-center justify-center gap-2">
+                      <img
+                        src="../src/img/phone.png"
+                        alt="phone_us"
+                        class="w-4"
+                      /><span class="text-[12px] font-bold"
+                        >(800) 333-3567</span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </footer>
+
+          <!-- footer end-->
         </div>
       </wrapper>
     </div>
